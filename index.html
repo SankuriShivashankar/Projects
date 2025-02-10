@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            height: 80px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .maincontent {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .sub {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .button button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: rgb(182, 113, 246);
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 10px;
+        }
+
+        .box {
+            background-color: rgb(231 231 241 / 43%);
+            width: 300px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+            padding: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* .button1, .button2 {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+        } */
+        .button1,
+        .button2 {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 13px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: rgb(145, 125, 225);
+        }
+
+        .button2 {
+            background-color: rgb(115, 199, 70);
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: white;
+                padding: 10px 0;
+            }
+
+            ul.active {
+                display: flex;
+            }
+
+            .heading {
+                font-size: 28px;
+            }
+
+            .sub {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="image">
+                <img src="UE-Logo-1.webp" width="150px">
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About us</a></li>
+                <li><img src="Lang.png" width="34px"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="maincontent">
+            <div class="heading">Download <b>UltraEdit</b> for Windows</div>
+            <div class="sub">Download and try UltraEdit before you buy it! This download includes the full Windows
+                version of the text editor.</div>
+            <div class="button">
+                <button><a href="ue_english_64.exe" style="color: white; text-decoration: none;">DOWNLOAD MAC OR LINUX
+                        VERSION</a></button>
+            </div>
+        </div>
+    </main>
+
+    <div class="container2">
+        <div class="box">
+            <p style="padding: 20px;">English</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Deutsch</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Italiano</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Easponal</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Francias</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Portugues</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Deutsch</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+        <div class="box">
+            <p style="padding: 20px;">Deutsch</p>
+            <div class="button-container">
+                <div class="button1">Download 32-bit</div>
+                <div class="button2">Download 64-bit</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
